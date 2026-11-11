@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>あいうえお表</title>
+
+<style>
+body{
+    font-family:"Yu Gothic";
+    margin:0;
+    padding:10px;
+    background:#f5f5f5;
+}
+
+#display{
+    height:120px;
+    background:#fff;
+    border:3px solid #999;
+    border-radius:10px;
+    font-size:60px;
+    padding:20px;
+    margin-bottom:10px;
+    overflow:auto;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(10,1fr);
+    gap:8px;
+}
+
+.btn{
+   height:90px;
+   display:flex;
+   flex-direction:column;
+   justify-content:center;
+   align-items:center;
+   gap:2px;
+ 
+   font-size:18px;
+   border-radius:5px;
+   border:2px solid #999;
+   background:white;
+   cursor:pointer;
+   padding:2px;
+   overflow:hidden;
+}
+
+.btn img{
+	width:45px;
+	height:45px;
+	object-fit:contain;
+}
+
+.btn span{
+	font-size:18px;
+	line-height:1;
+}
+
+.btn:hover{
+   	 background:#ffeaa7;
+}
+
+.control{
+   	background:#74b9ff;
+   	color:white;
+	height:110px;
+}
+
+.play-btn{
+grid-column: span 3;
+font-size:36px;
+}
+
+.bottom-btn{
+    height:110px;
+    font-size:24px;
+}
+
+</style>
+</head>
+
+<body>
+
+<div id="display"></div>
+
+<div class="grid">
+<button class="btn" onclick="addChar('わ')"><img src="images/o.png" alt="わ"><span>わ</span></button>
+<button class="btn" onclick="addChar('ら')"><img src="images/o.png" alt="ら"><span>ら</span></button>
+<button class="btn" onclick="addChar('や')"><img src="images/o.png" alt="や"><span>や</span></button>
+<button class="btn" onclick="addChar('ま')"><img src="images/o.png" alt="ま"><span>ま</span></button>
+<button class="btn" onclick="addChar('は')"><img src="images/o.png" alt="は"><span>は</span></button>
+<button class="btn" onclick="addChar('な')"><img src="images/o.png" alt="な"><span>な</span></button>
+<button class="btn" onclick="addChar('た')"><img src="images/o.png" alt="た"><span>た</span></button>
+<button class="btn" onclick="addChar('さ')"><img src="images/o.png" alt="さ"><span>さ</span></button>
+<button class="btn" onclick="addChar('か')"><img src="images/o.png" alt="か"><span>か</span></button>
+<button class="btn" onclick="addChar('あ')"><img src="images/o.png" alt="あ"><span>あ</span></button>
+
+<button class="btn" onclick="addChar('を')"><img src="images/o.png" alt="を"><span>を</span></button>
+<button class="btn" onclick="addChar('り')"><img src="images/o.png" alt="り"><span>り</span></button>
+<button class="btn" onclick="addChar('')"></button>
+<button class="btn" onclick="addChar('み')"><img src="images/o.png" alt="み"><span>み</span></button>
+<button class="btn" onclick="addChar('ひ')"><img src="images/o.png" alt="ひ"><span>ひ</span></button>
+<button class="btn" onclick="addChar('に')"><img src="images/o.png" alt="に"><span>に</span></button>
+<button class="btn" onclick="addChar('ち')"><img src="images/o.png" alt="ち"><span>ち</span></button>
+<button class="btn" onclick="addChar('し')"><img src="images/o.png" alt="し"><span>し</span></button>
+<button class="btn" onclick="addChar('き')"><img src="images/o.png" alt="き"><span>き</span></button>
+<button class="btn" onclick="addChar('い')"><img src="images/o.png" alt="い"><span>い</span></button>
+
+<button class="btn" onclick="addChar('ん')"><img src="images/o.png" alt="ん"><span>ん</span></button>
+<button class="btn" onclick="addChar('る')"><img src="images/o.png" alt="る"><span>る</span></button>
+<button class="btn" onclick="addChar('ゆ')"><img src="images/o.png" alt="ゆ"><span>ゆ</span></button>
+<button class="btn" onclick="addChar('む')"><img src="images/o.png" alt="む"><span>む</span></button>
+<button class="btn" onclick="addChar('ふ')"><img src="images/o.png" alt="ふ"><span>ふ</span></button>
+<button class="btn" onclick="addChar('ぬ')"><img src="images/o.png" alt="ぬ"><span>ぬ</span></button>
+<button class="btn" onclick="addChar('つ')"><img src="images/o.png" alt="つ"><span>つ</span></button>
+<button class="btn" onclick="addChar('す')"><img src="images/o.png" alt="す"><span>す</span></button>
+<button class="btn" onclick="addChar('く')"><img src="images/o.png" alt="く"><span>く</span></button>
+<button class="btn" onclick="addChar('う')"><img src="images/o.png" alt="う"><span>う</span></button>
+
+<button class="btn" onclick="addChar('、')">、</button>
+<button class="btn" onclick="addChar('れ')"><img src="images/o.png" alt="れ"><span>れ</span></button>
+<button class="btn" onclick="addChar('')"></button>
+<button class="btn" onclick="addChar('め')"><img src="images/o.png" alt="め"><span>め</span></button>
+<button class="btn" onclick="addChar('へ')"><img src="images/o.png" alt="へ"><span>へ</span></button>
+<button class="btn" onclick="addChar('ね')"><img src="images/o.png" alt="ね"><span>ね</span></button>
+<button class="btn" onclick="addChar('て')"><img src="images/o.png" alt="て"><span>て</span></button>
+<button class="btn" onclick="addChar('せ')"><img src="images/o.png" alt="せ"><span>せ</span></button>
+<button class="btn" onclick="addChar('け')"><img src="images/o.png" alt="け"><span>け</span></button>
+<button class="btn" onclick="addChar('え')"><img src="images/o.png" alt="え"><span>え</span></button>
+
+<button class="btn" onclick="addChar('。')">。</button>
+<button class="btn" onclick="addChar('ろ')"><img src="images/o.png" alt="ろ"><span>ろ</span></button>
+<button class="btn" onclick="addChar('よ')"><img src="images/o.png" alt="よ"><span>よ</span></button>
+<button class="btn" onclick="addChar('も')"><img src="images/o.png" alt="も"><span>も</span></button>
+<button class="btn" onclick="addChar('ほ')"><img src="images/o.png" alt="ほ"><span>ほ</span></button>
+<button class="btn" onclick="addChar('の')"><img src="images/o.png" alt="の"><span>の</span></button>
+<button class="btn" onclick="addChar('と')"><img src="images/o.png" alt="と"><span>と</span></button>
+<button class="btn" onclick="addChar('そ')"><img src="images/o.png" alt="そ"><span>そ</span></button>
+<button class="btn" onclick="addChar('こ')"><img src="images/o.png" alt="こ"><span>こ</span></button>
+<button class="btn" onclick="addChar('お')"><img src="images/o.png" alt="お"><span>お</span></button>
+
+<button class="btn control bottom-btn" onclick="deleteOne()">一消</button>
+<button class="btn control bottom-btn" onclick="clearText()">全消</button>
+<button class="btn control bottom-btn" onclick="toSmallTsu()">小</button>
+<button class="btn control bottom-btn" onclick="toDakuon()">゛</button>
+<button class="btn control bottom-btn" onclick="toHandakuon()">゜</button>
+<button></button>
+<button></button>
+<button class="btn control play-btn" onclick="speakText()">🔊再生</button>
+</div>
+
+<script>
+
+let text="";
+
+function addChar(char){
+    text += char;
+    document.getElementById("display").textContent = text;
+}
+
+function deleteOne(){
+    text = text.slice(0,-1);
+    document.getElementById("display").textContent = text;
+}
+
+function clearText(){
+    text = "";
+    document.getElementById("display").textContent = "";
+}
+
+
+function replaceLastChar(map){
+    if(text.length === 0) return;
+
+    const last = text.slice(-1);
+    if(map[last]){
+        text = text.slice(0,-1) + map[last];
+        document.getElementById("display").textContent = text;
+    }
+}
+
+function toSmallTsu(){
+    const map = {
+	"つ":"っ","や":"ゃ","ゆ":"ゅ","よ":"ょ",
+	"あ":"ぁ","い":"ぃ","う":"ぅ","え":"ぇ","お":"ぉ",
+    };
+    replaceLastChar(map);
+}
+
+function toDakuon(){
+    const map = {
+        "か":"が","き":"ぎ","く":"ぐ","け":"げ","こ":"ご",
+        "さ":"ざ","し":"じ","す":"ず","せ":"ぜ","そ":"ぞ",
+        "た":"だ","ち":"ぢ","つ":"づ","て":"で","と":"ど",
+        "は":"ば","ひ":"び","ふ":"ぶ","へ":"べ","ほ":"ぼ"
+    };
+    replaceLastChar(map);
+}
+
+function toHandakuon(){
+    const map = {
+        "は":"ぱ","ひ":"ぴ","ふ":"ぷ","へ":"ぺ","ほ":"ぽ"
+    };
+    replaceLastChar(map);
+}
+
+function speakText(){
+
+    if(text==="") return;
+
+    speechSynthesis.cancel();
+
+    const utterance = new SpeechSynthesisUtterance(text);
+    utterance.lang = "ja-JP";
+    utterance.rate = 0.6;
+
+    speechSynthesis.speak(utterance);
+}
+
+</script>
+
+</body>
+</html>
